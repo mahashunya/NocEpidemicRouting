@@ -1,0 +1,30 @@
+module node (
+    input wire clk,
+    input wire rstn,
+    input wire i_ready_l,
+    input wire i_ready_r,
+    input wire i_ready_t,
+    input wire i_ready_b,
+    input wire i_valid_l,
+    input wire i_valid_r,
+    input wire i_valid_t,
+    input wire i_valid_b,
+    output wire o_ready_l,
+    output wire o_ready_r,
+    output wire o_ready_t,
+    output wire o_ready_b,
+    output wire o_valid_l,
+    output wire o_valid_r,
+    output wire o_valid_t,
+    output wire o_valid_b,
+    input wire [7:0] i_data_l,
+    input wire [7:0] i_data_r,
+    input wire [7:0] i_data_t,
+    input wire [7:0] i_data_b,
+    output wire [7:0] o_data_l,
+    output wire [7:0] o_data_r,
+    output wire [7:0] o_data_t,
+    output wire [7:0] o_data_b
+);
+    
+endmodule
