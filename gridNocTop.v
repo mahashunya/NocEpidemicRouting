@@ -94,6 +94,7 @@ generate
                .o_data_r(8'b00000000),
                .o_data_t(8'b00000000),
                .o_data_b(i_data_t[x][y-1]),
+          );
       end
 
       else if(x!=0 & x!=X-1 & y==0)
