@@ -1,6 +1,6 @@
 module gridNocTop #(parameter X=4,Y=4) (
     input wire clk,
-    input wire rstn,
+    input wire rstn
 );
 
 wire i_ready_l[X-1:0][Y-1:0];
@@ -61,7 +61,7 @@ generate
                .o_data_l(8'b00000000),
                .o_data_r(i_data_l[x+1][y]),
                .o_data_t(i_data_b[x][y+1]),
-               .o_data_b(8'b00000000),
+               .o_data_b(8'b00000000)
           );
       end
 
@@ -93,8 +93,8 @@ generate
                .o_data_l(i_data_r[x-1][y]),
                .o_data_r(8'b00000000),
                .o_data_t(8'b00000000),
-               .o_data_b(i_data_t[x][y-1]),
-          );
+               .o_data_b(i_data_t[x][y-1])
+               );
       end
 
       else if(x!=0 & x!=X-1 & y==0)
@@ -125,7 +125,7 @@ generate
                .o_data_l(i_data_r[x-1][y]),
                .o_data_r(i_data_l[x+1][y]),
                .o_data_t(i_data_b[x][y+1]),
-               .o_data_b(8'b00000000),
+               .o_data_b(8'b00000000)
           );
       end
 
@@ -157,7 +157,7 @@ generate
                .o_data_l(8'b00000000),
                .o_data_r(i_data_l[x+1][y]),
                .o_data_t(i_data_b[x][y+1]),
-               .o_data_b(i_data_t[x][y-1]),
+               .o_data_b(i_data_t[x][y-1])
           );
       end
 
@@ -186,10 +186,10 @@ generate
                .i_data_r(o_data_l[x+1][y]),
                .i_data_t(8'b00000000),
                .i_data_b(o_data_t[x][y-1]),
-               .o_data_l(i_data_o[x-1][y]),
+               .o_data_l(i_data_r[x-1][y]),
                .o_data_r(i_data_l[x+1][y]),
                .o_data_t(8'b00000000),
-               .o_data_b(i_data_t[x][y-1]),
+               .o_data_b(i_data_t[x][y-1])
           );
       end
 
@@ -221,7 +221,7 @@ generate
                .o_data_l(i_data_r[x-1][y]),
                .o_data_r(8'b00000000),
                .o_data_t(i_data_b[x][y+1]),
-               .o_data_b(i_data_t[x][y-1]),
+               .o_data_b(i_data_t[x][y-1])
           );
       end
       
@@ -253,7 +253,7 @@ generate
                .o_data_l(i_data_r[x-1][y]),
                .o_data_r(i_data_l[x+1][y]),
                .o_data_t(i_data_b[x][y+1]),
-               .o_data_b(i_data_t[x][y-1]),
+               .o_data_b(i_data_t[x][y-1])
           ); 
       end
      end
